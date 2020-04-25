@@ -10,7 +10,7 @@ public class ReverseString {
         System.out.println(ReverseString.reverseString(test3));
 
     }
-
+    // Solution for https://leetcode.com/explore/interview/card/top-interview-questions-easy/127/strings/879/
     public static char[] reverseString(char[] s) {
         // two pointers one at start and one at end and swap and meet in middle
         int j = s.length - 1;
