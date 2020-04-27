@@ -1,13 +1,13 @@
 import java.util.*;
 
 // Solution for https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/
-class Solution {
+class SmallNumberCount {
 
 
     public static void main(String[] args) {
         int[] nums1 = {8,1,2,2,2,3,1};
         int[] nums = {7,7,7,7};
-        System.out.println(Arrays.toString(Solution.smallerNumbersThanCurrent(nums1)));
+        System.out.println(Arrays.toString(SmallNumberCount.smallerNumbersThanCurrent(nums1)));
     }
 
 
