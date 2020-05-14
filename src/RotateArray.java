@@ -1,26 +1,36 @@
 import java.util.Arrays;
 
-public class ReverseString {
+public class RotateArray {
 
     public static void main(String[] args) {
-        char[] test = {'h','e','l','l','o'};
-        char[] test1 = {'T','y','l','e','r'};
-        char[] test2 = {'H','a','n','n','a','h'};
-        char[] test3 = {'B','E','R','r','E','T', 't'};
-        System.out.println(ReverseString.reverseString(test3));
+        int[] test = {1,2};
+        rotate(test, 3);
+        //System.out.println(rotate(test, 3));
 
     }
-    // Solution for https://leetcode.com/explore/interview/card/top-interview-questions-easy/127/strings/879/
-    public static char[] reverseString(char[] s) {
-        // two pointers one at start and one at end and swap and meet in middle
-        int j = s.length - 1;
-        for (int i = 0; i < s.length / 2; i++, j--) {
-            char temp = s[i];
-            s[i] = s[j];
-            s[j] = temp;
+    // Solution for https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/646/
+    public static void rotate(int[] nums, int k) {
+        int[] fin = new int[nums.length];
 
+        if (k > nums.length) {
+            k = k % nums.length;
         }
-        return s;
+
+        int t = 0;
+        for (int i = nums.length - k; i < nums.length; i++, t++) {
+            fin[t] = nums[i];
+        }
+        for (int j = 0; j < nums.length - k; j++, t++) {
+            fin[t] = nums[j];
+        }
+
+        for (int l = 0; l < nums.length; l++) {
+            nums[l] = fin[l];
+        }
+
+
+
+        System.out.println(Arrays.toString(nums));
     }
 
 }
